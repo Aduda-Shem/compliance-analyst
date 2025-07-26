@@ -103,7 +103,7 @@ npm run dev
 DATABASE_URL=postgresql://postgres:password@localhost:5432/compliance_assistant
 
 # LLM API
-GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_API_KEY=gemini_api_key
 
 # Optional: Logging
 LOG_LEVEL=INFO
