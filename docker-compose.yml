@@ -1,0 +1,42 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: compliance_postgress
+    environment:
+      POSTGRES_DB: compliance_assistant
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # Backend API
+  backend:
+    build: ./backend
+    container_name: compliance_backend
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/compliance_assistant
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build: ./frontend
+    container_name: compliance_frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

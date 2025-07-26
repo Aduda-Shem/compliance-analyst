@@ -1,0 +1,55 @@
+# Node.js (frontend)
+node_modules/
+.next/
+dist/
+out/
+.env
+frontend/.env
+
+# Python (backend)
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.so
+.Python
+env/
+venv/
+ENV/
+backend/__pycache__/
+backend/*.py[cod]
+backend/.env
+
+# Editor & OS files
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Ignore test coverage and temp files
+coverage/
+htmlcov/
+*.cover
+*.log
+*.tmp
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Ignore compiled output
+build/
+*.bak
+
+# Ignore system-wide .env
+.env
+
+# Misc
+*.sqlite3
+*.db
