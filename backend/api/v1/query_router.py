@@ -31,14 +31,10 @@ async def get_sessions(service: ChatService = Depends(get_chat_service)):
 @router.get("/sessions/{session_id}", response_model=ChatSessionResponse)
 async def get_session(session_id: int, service: ChatService = Depends(get_chat_service)):
     session = service.get_session(session_id)
-    if not session:
-        raise HTTPException(status_code=404, detail="Session not found")
     return session
 
 @router.delete("/sessions/{session_id}")
 async def delete_session(session_id: int, service: ChatService = Depends(get_chat_service)):
     success = service.delete_session(session_id)
-    if not success:
-        raise HTTPException(status_code=404, detail="Session not found")
     return {"message": "Session deleted successfully"}
 
