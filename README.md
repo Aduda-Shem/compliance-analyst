@@ -226,10 +226,6 @@ def build_prompt(user_question: str, conversation_history: Optional[List[str]] =
 
 
 ## Screens
-![alt text](<Screenshot 2025-07-27 at 01.11.07.png>) 
 ![alt text](<Screenshot 2025-07-27 at 01.10.42.png>)
-
-## Walkthrough
-<video controls src="Screen Recording 2025-07-27 at 01.25.44.mov" title="Title"></video>
-
-https://github.com/Aduda-Shem/compliance-analyst.git
+![alt text](<Screenshot 2025-07-27 at 02.24.21.png>)
+![alt text](<Screenshot 2025-07-27 at 01.11.07.png>) 
