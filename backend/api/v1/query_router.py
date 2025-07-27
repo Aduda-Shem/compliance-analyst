@@ -8,6 +8,7 @@ from core.database import get_db
 
 router = APIRouter()
 
+#Router functions 
 def get_query_service(db: Session = Depends(get_db)):
     chat_service = ChatService(db)
     return QueryService(llm_client=GeminiLLMClient(), chat_service=chat_service)
