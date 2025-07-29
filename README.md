@@ -1,6 +1,6 @@
 # Compliance Assistant - AI-Powered Business Compliance Chat
 
-A modern full-stack application that helps Small and Medium Enterprises (SMEs) navigate legal, regulatory, and operational compliance challenges using AI.
+A full-stack application that helps Small and Medium Enterprises (SMEs) navigate legal, regulatory, and operational compliance challenges using AI.
 
 ## 🚀 Features
 
