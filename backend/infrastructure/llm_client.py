@@ -15,7 +15,7 @@ class GeminiLLMClient(LLMClientInterface):
                 url, 
                 headers=headers, 
                 json=payload, 
-                params={"key": settings.LLM_API_KEY}
+                params={"key": settings.GEMINI_API_KEY}
             )
             response.raise_for_status()
             data = response.json()

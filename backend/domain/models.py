@@ -12,8 +12,11 @@ class ChatSession(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     is_active = Column(Boolean, default=True)
     
-    messages = relationship("ChatMessage", back_populates="session", cascade="all, delete-orphan")
+    messages = relationship("ChatMessage", 
+                            back_populates="session", 
+                            cascade="all, delete-orphan")
 
+# single message in chat Session
 class ChatMessage(Base):
     __tablename__ = "chat_messages"
     
@@ -23,4 +26,5 @@ class ChatMessage(Base):
     is_user = Column(Boolean, default=True) 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     
-    session = relationship("ChatSession", back_populates="messages") 
+    session = relationship("ChatSession", 
+                           back_populates="messages") 

@@ -19,7 +19,7 @@ services:
     container_name: compliance_backend
     environment:
       - DATABASE_URL=postgresql://postgres:password@postgres:5432/compliance_assistant
-      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_API_KEY=AIzaSyCqksZcI6QcmnmtOhADuF4_fcmTWs0RRAs
     ports:
       - "8000:8000"
     depends_on:
